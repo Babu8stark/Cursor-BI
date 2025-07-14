@@ -1,0 +1,39 @@
+{
+  "name": "@beauty-ai/shared",
+  "version": "1.0.0",
+  "description": "Shared types, utilities, and business logic for Beauty AI Platform",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs",
+      "types": "./lib/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "clean": "rm -rf lib",
+    "lint": "eslint src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "test": "jest"
+  },
+  "dependencies": {
+    "firebase": "^10.7.0",
+    "zod": "^3.22.0",
+    "date-fns": "^2.30.0",
+    "color": "^4.2.3",
+    "ml-matrix": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/color": "^3.0.6",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "files": [
+    "lib"
+  ]
+}
